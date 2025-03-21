@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
 });
 
 //Create a WebSocket server and listen on port 3001
-const wss = new WebSocketServer.Server({ server });
+const wss = new WebSocketServer({ server });
 
 //Monitor connection events
 wss.on('connection', (ws) => {
