@@ -10,6 +10,10 @@ import { WalletAccount } from "./wallet-account.tsx";
 import { HistoricalEvents } from "./historical-events.tsx";
 import { useDojoSDK, useModel } from "@dojoengine/sdk/react";
 
+import { React } from 'react';
+import { Chat } from './components/Chat';
+import { useWebSocket } from './hooks/WebSocket';
+
 /**
  * Main application component that provides game functionality and UI.
  * Handles entity subscriptions, state management, and user interactions.
@@ -259,13 +263,13 @@ function App() {
         </div>
     );
 
-    useWebSocket(); // start WebSocket listening
-  return (
-    <div className="p-4">
-      <h1 className="text-xl font-bold">chatroom</h1>
-      <Chat />
-    </div>
-  );
+    useWebSocket();
+      return (
+        <div className="app">
+          <h1>Chat Application</h1>
+          <Chat /> {/* chatroom */}
+        </div>
+      );
     
 }
 
