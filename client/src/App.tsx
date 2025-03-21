@@ -10,7 +10,6 @@ import { WalletAccount } from "./wallet-account.tsx";
 import { HistoricalEvents } from "./historical-events.tsx";
 import { useDojoSDK, useModel } from "@dojoengine/sdk/react";
 
-import { React } from 'react';
 import Chat from './components/Chat.tsx';
 import useWebSocket from './hooks/WebSocket.tsx';
 
