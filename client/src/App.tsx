@@ -263,7 +263,7 @@ function App() {
         </div>
     );
 
-    useWebSocket("wss://court-ill-bathrooms-subsection.trycloudflare.com");
+    useWebSocket("wss://court-ill-bathrooms-subsection.trycloudflare.com:3001");
       return (
         <div className="app">
           <h1>Chat Application</h1>
