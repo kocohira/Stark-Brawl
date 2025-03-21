@@ -258,6 +258,15 @@ function App() {
             </div>
         </div>
     );
+
+    useWebSocket(); // start WebSocket listening
+  return (
+    <div className="p-4">
+      <h1 className="text-xl font-bold">chatroom</h1>
+      <Chat />
+    </div>
+  );
+    
 }
 
 export default App;
