@@ -1,4 +1,3 @@
-import React from 'react';
 import { useChatStore } from '../store/ChatStore.ts'; // import ChatStore to manage status
 import MessageItem from './MessageItem.tsx'; // import message components
 
