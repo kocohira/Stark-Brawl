@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { ChatStore } from '../store/ChatStore.ts';
+import { useChatStore } from '../store/ChatStore.ts';
 
 const MessageInput = () => {
   const [message, setMessage] = useState('');
-  const sendMessage = ChatStore(state => state.sendMessage); //use ChatStore to send message
+  const sendMessage = useChatStore(state => state.sendMessage); //use ChatStore to send message
 
   const handleSend = () => {
     if (message.trim()) {
