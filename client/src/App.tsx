@@ -11,8 +11,8 @@ import { HistoricalEvents } from "./historical-events.tsx";
 import { useDojoSDK, useModel } from "@dojoengine/sdk/react";
 
 import { React } from 'react';
-import { Chat } from './components/Chat.tsx';
-import { useWebSocket } from './hooks/WebSocket.tsx';
+import Chat from './components/Chat.tsx';
+import useWebSocket from './hooks/WebSocket.tsx';
 
 /**
  * Main application component that provides game functionality and UI.
