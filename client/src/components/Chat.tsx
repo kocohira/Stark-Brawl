@@ -1,6 +1,6 @@
 import React from 'react';
-import MessagesList from './MessagesList';
-import MessageInput from './MessageInput';
+import MessagesList from './MessagesList.tsx';
+import MessageInput from './MessageInput.tsx';
 
 const Chat = () => {
   return (
