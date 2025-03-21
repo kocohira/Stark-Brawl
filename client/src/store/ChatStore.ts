@@ -1,18 +1,26 @@
 import { create } from "zustand";
 
+interface Message {
+  sender: string;
+  content: string;
+  timestamp: number;
+}
+
 interface ChatStore {
-  messages: string[];
-  sendMessage: (message: string) => void;
-  receiveMessage: (message: string) => void;
+  messages: Message[];
+  addMessage: (message: Message) => void;
+  sendMessage: (messageContent: string) => void;
 }
 
 export const useChatStore = create<ChatStore>((set) => ({
   messages: [],
-  sendMessage: (message) => {
-    set((state) => ({ messages: [...state.messages, `You: ${message}`] }));
-    // here add WebSocket sebd logic.
-  },
-  receiveMessage: (message) => {
-    set((state) => ({ messages: [...state.messages, `Received: ${message}`] }));
+  addMessage: (message) => set((state) => ({ messages: [...state.messages, message] })),
+  sendMessage: (messageContent) => {
+    const newMessage: Message = {
+      sender: 'User', //sender
+      content: messageContent,
+      timestamp: Date.now(),
+    };
+    set((state) => ({ messages: [...state.messages, newMessage] }));
   },
 }));
