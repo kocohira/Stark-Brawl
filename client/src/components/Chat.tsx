@@ -1,4 +1,3 @@
-import React from 'react';
 import MessagesList from './MessagesList.tsx';
 import MessageInput from './MessageInput.tsx';
 
