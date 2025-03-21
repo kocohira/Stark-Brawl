@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
 });
 
 //Create a WebSocket server and listen on port 3001
-const wss = new WebSocket.Server({ server });
+const wss = new WebSocketServer.Server({ server });
 
 //Monitor connection events
 wss.on('connection', (ws) => {
@@ -19,7 +19,7 @@ wss.on('connection', (ws) => {
     console.log('received: %s', message);
     //Broadcast the received message to all connected clients
     wss.clients.forEach((client) => {
-      if (client !== ws && client.readyState === WebSocket.OPEN) {
+      if (client !== ws && client.readyState === ws.OPEN) {
         client.send(message);
       }
     });
