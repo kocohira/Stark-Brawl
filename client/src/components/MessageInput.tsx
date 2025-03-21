@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useChatStore } from '../store/ChatStore.tsx';
+import { useChatStore } from '../store/ChatStore.ts';
 
 const MessageInput = () => {
   const [message, setMessage] = useState('');
