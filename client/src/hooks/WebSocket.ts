@@ -5,7 +5,7 @@ const useWebSocket = (url: string) => {
   const addMessage = useChatStore(state => state.addMessage);
 
   useEffect(() => {
-    const ws = new WebSocket("wss://schools-ride-raised-task.trycloudflare.com:8080"); // here change to real WebSocket server address.
+    const ws = new WebSocket("wss://mem-as-permissions-talks.trycloudflare.com:8080"); // here change to real WebSocket server address.
 
     ws.onopen = () => {
       console.log('WebSocket Connected');
