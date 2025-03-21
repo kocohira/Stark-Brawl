@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useChatStore } from "../store/ChatStore";
+import { useChatStore } from "../store/ChatStore.ts";
 
 const useWebSocket = (url: string) => {
   const addMessage = useChatStore(state => state.addMessage);
