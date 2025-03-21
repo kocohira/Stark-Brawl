@@ -5,7 +5,7 @@ const useWebSocket = (url: string) => {
   const addMessage = useChatStore(state => state.addMessage);
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:3001"); // here change to real WebSocket server address.
+    const ws = new WebSocket("ws://156.231.111.65:3001"); // here change to real WebSocket server address.
 
     ws.onopen = () => {
       console.log('WebSocket Connected');
