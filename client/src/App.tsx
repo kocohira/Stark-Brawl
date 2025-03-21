@@ -262,7 +262,7 @@ function App() {
         </div>
     );
 
-    useWebSocket("wss://mem-as-permissions-talks.trycloudflare.com :8080");
+    useWebSocket("wss://mem-as-permissions-talks.trycloudflare.com:8080");
       return (
         <div className="app">
           <h1>Chat Application</h1>
