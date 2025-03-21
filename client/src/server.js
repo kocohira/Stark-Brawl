@@ -30,6 +30,6 @@ wss.on('connection', (ws) => {
 });
 
 //Start the server and listen on port 3001
-server.listen(3001, () => {
-  console.log('WebSocket server is listening on ws://156.231.111.65:3001');
+server.listen(3001, '0.0.0.0', () => {
+  console.log('WebSocket server is listening on ws://0.0.0.0:3001');
 });
