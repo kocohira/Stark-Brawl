@@ -263,7 +263,7 @@ function App() {
         </div>
     );
 
-    useWebSocket("ws://localhost:3001");
+    useWebSocket("ws://156.231.111.65:3001");
       return (
         <div className="app">
           <h1>Chat Application</h1>
