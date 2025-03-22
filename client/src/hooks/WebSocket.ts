@@ -5,7 +5,7 @@ const useWebSocket = (url: string) => {
   const addMessage = useChatStore(state => state.addMessage);
 
   useEffect(() => {
-    const ws = new WebSocket("wss://perception-released-export-passengers.trycloudflare.com:8080");
+    const ws = new WebSocket("wss://perception-released-export-passengers.trycloudflare.com");
 
     ws.onopen = () => {
       console.log('WebSocket Connected');
