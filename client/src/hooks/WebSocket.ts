@@ -5,15 +5,19 @@ const useWebSocket = (url: string) => {
   const addMessage = useChatStore(state => state.addMessage);
 
   useEffect(() => {
-    const ws = new WebSocket("wss://perception-released-export-passengers.trycloudflare.com:8080"); // here change to real WebSocket server address.
+    const ws = new WebSocket("wss://perception-released-export-passengers.trycloudflare.com:8080");
 
     ws.onopen = () => {
       console.log('WebSocket Connected');
     };
 
     ws.onmessage = (event) => {
-      const message = JSON.parse(event.data);
-      addMessage(message); // update message to store
+      try {
+        const message = JSON.parse(event.data); // Ensure the message is valid JSON
+        addMessage(message); // Update message to store
+      } catch (error) {
+        console.error('Failed to parse WebSocket message:', event.data);
+      }
     };
 
     ws.onerror = (error) => {
