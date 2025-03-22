@@ -262,7 +262,7 @@ function App() {
         </div>
     );
 
-    useWebSocket("wss://perception-released-export-passengers.trycloudflare.com:8080");
+    useWebSocket("wss://perception-released-export-passengers.trycloudflare.com");
       return (
         <div className="app">
           <h1>Chat Application</h1>
