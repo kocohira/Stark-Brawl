@@ -261,14 +261,14 @@ function App() {
             </div>
         </div>
     );
-
-    useWebSocket("wss://perception-released-export-passengers.trycloudflare.com");
-      return (
-        <div className="app">
-          <h1>Chat Application</h1>
-          <Chat /> {/* chatroom */}
-        </div>
-      );
+    
+    //useWebSocket("wss://perception-released-export-passengers.trycloudflare.com");
+      //return (
+       //<div className="app">
+          //<h1>Chat Application</h1>
+          //<Chat /> {/* chatroom */}
+        //</div>
+      //);
     
 }
 
